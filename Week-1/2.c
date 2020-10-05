@@ -17,7 +17,7 @@ main ()
 	    state = 3;
 	  else
 	    {
-	      printf ('Invalid\n');
+	      printf ("Invalid\n");
 	      exit (0);
 	    }
 	  break;
