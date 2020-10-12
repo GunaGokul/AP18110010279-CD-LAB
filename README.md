@@ -15,3 +15,39 @@ CSE-306 Compiler Design Lab
 3.     Count the number of Lines in given input
 4.     Recognize strings ending with 00. 
 5.     Recognize a string with three consecutive 0’s.
+
+# Week-4 
+
+1)  Implement lexical analyzer using LEX for recognizing the following tokens:
+.   A minimum of 10 keywords of your choice
+
+.   Identifiers with the regular expression : letter(letter | digit)*
+
+.   Integers with the regular expression: digit+
+
+.   Relational operators: <, >, <=, >=, ==, !=
+
+.   Ignores everything between multi line comments (/* …. */)
+
+.   Using files for input and output
+
+2) Construct Recursive Descent Parser for the grammar using C program
+    G = ({S, L}, {(, ), a, ,}, {S -> (L) | a ; L -> L, S | S}, S) and verify the acceptability of the following strings:
+
+    (i)(a,(a,a))
+
+    (ii)(a,((a,a),(a,a)))
+
+    You can manually eliminate Left Recursion if any in the grammar.
+
+    A reference C program for the grammar given below is attached. 
+
+    E -> TE’
+
+    E’+TE’ | ͼ
+
+    T -> FT’
+
+    T’ -> *FT’ | ͼ
+
+    F -> (E) | i
