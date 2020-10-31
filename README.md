@@ -51,3 +51,43 @@ CSE-306 Compiler Design Lab
     T’ -> *FT’ | ͼ
 
     F -> (E) | i
+
+# Week-5
+
+1) Write a C program to compute the FIRST and FOLLOW functions for all non-terminals in a given grammar G. Assume that G is not left recursive. 
+
+The input format and output formats were discussed in the lab session and also in the below Input format is given. 
+
+Input format:  First read the number of productions and each production A -> B will be given as string A-B where A is a non-terminal and B is a string containing grammar symbols. The non-terminal in the head of the first production is the start symbol of the grammar. Further, a production A -> \epsilon is given as A-^. 
+
+The last date to submit the assignment: 19 Oct 2020 at 10 PM. 
+
+
+# Week-6
+
+Lab Assignment: Implement Predictive Parser using C for the Expression Grammar
+    E à TE’
+
+    E’à +TE’ | ε
+
+    T à FT’
+
+    T’à *FT’ | ε
+
+    F  à (E) | d
+
+In the lab session, we have discussed the program (attached with this email) for the grammar 
+    S -> aBa
+    B -> bB | ε
+ 
+with the assumption that the parse table is : 
+
+|   | A      | B     | $ |
+|---|--------|-------|---|
+| S | S->aBa |       |   |
+| B | B->E   | B->bB |   |
+ 
+
+While implementing the algorithm for the above grammar in the assignment, first you construct the parse table by using the algorithm discussed in the class. This algorithm requires the computation of FIRST and FOLLOW functions. You have implemented this in the previous lab assignment. 
+
+The due date for the submission: 03  Nov 2020 10:00 PM. 
