@@ -1,78 +1,67 @@
-#include<stdio.h>
-void
-main ()
+#include <stdio.h>
+#include <stdlib.h>
+
+void main()
 {
-  int state = 0, i = 0;
-  char curr, input[20];
-  printf ("Enter str:\n");
-  scanf ("%s", input);
-  while ((curr = input[i++]) != '\0')
+    int s=0,i=0;
+    char c,input[20];
+    printf("Enter the input string:");
+    scanf("%s",input);
+    while((c=input[i++])!='\0'){
+        switch(s)
     {
-      switch (state)
-	{
-	case 0:
-	  if (curr == 'a')
-	    state = 1;
-	  else if (curr == 'b')
-	    state = 3;
-	  else
-	    {
-	      printf ("Invalid\n");
-	      exit (0);
-	    }
-	  break;
-	case 1:
-	  if (curr == 'a')
-	    state = 2;
-	  else if (curr == 'b')
-	    state = 3;
-	  else
-	    {
-	      printf ("Invalid\n");
-	      exit (0);
-	    }
-	  break;
-	case 2:
-	  if (curr == 'a')
-	    state = 2;
-	  else if (curr == 'b')
-	    state = 3;
-	  else
-	    {
-	      printf ("Invalid\n");
-	      exit (0);
-	    }
-	  break;
-	case 3:
-	  if (curr == 'a')
-	    state = 1;
-	  else if (curr == 'b')
-	    state = 4;
-	  else
-	    {
-	      printf ("Invalid\n");
-	      exit (0);
-	    }
-	  break;
-	case 4:
-	  if (curr == 'a')
-	    state = 1;
-	  else if (curr == 'b')
-	    state = 4;
-	  else
-	    {
-	      printf ("Invalid\n");
-	      exit (0);
-	    }
-	  break;
-	}
+        case 0: if(c=='a')
+                s=1;
+                else if(c=='b')
+                s=2;
+                else{
+                    printf("Invalid token");
+                    exit(0);
+                }
+                break;
+        case 1: if(c=='a')
+                s=2;
+                else if(c=='b')
+                s=3;
+                else{
+                    printf("Invalid token");
+                    exit(0);
+                }
+                break;
+        case 2: if(c=='a')
+                s=2;
+                else if(c=='b')
+                s=3;
+                else{
+                    printf("Invalid token");
+                    exit(0);
+                }
+                break;
+        case 3: if(c=='a')
+                s=1;
+                else if(c=='b')
+                s=4;
+                else{
+                    printf("Invalid token");
+                    exit(0);
+                }
+                break;
+
+        case 4: if(c=='a')
+                s=2;
+                else if(c=='b')
+                s=4;
+                else{
+                    printf("Invalid token");
+                    exit(0);
+                }
+                break;
     }
-  if (state == 2 || state == 4)
-    {
-      printf ("\nString accepted\n");
+
     }
-  else
-    {
-      printf ("\nString not accepted\n");
+    if(s==2 || s==4)
+        printf("String accepted");
+    else{
+        printf("String not accepted");
     }
 }
