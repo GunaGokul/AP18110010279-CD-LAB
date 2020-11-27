@@ -1,3 +1,10 @@
+/*
+1. Shift Reduce Parser for
+    E->E+E
+    E->E*E
+    E->(E)
+    E->d
+*/
 #include<stdio.h>
 #include<string.h>
 int E(),Edash(),T(),Tdash(),F();
