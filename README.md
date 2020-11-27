@@ -7,6 +7,17 @@ CSE-306 Compiler Design Lab
 1.     Set of all strings over binary alphabet containing even number of 0’s and even number of 1’s.
 2.     Lab Assignment: Set of all strings ending with two symbols of same type.
 
+# Week-2
+
+1. Implement lexical analyser using C for recognizing the following tokens:
+• 24 keywords (given in the following program)
+• Identifiers with the regular expression : letter(letter | digit)*
+• Integers with the regular expression: digit+
+• Relational operators: <, >, <=, >=, ==, !=
+• Ignores everything between multi line comments (/* .... */)
+• Storing identifiers in symbol table.
+
+
 # Week 3: Introduction to LEX tool
 
 #      Implement the following programs using Lex tool
@@ -91,3 +102,37 @@ with the assumption that the parse table is :
 While implementing the algorithm for the above grammar in the assignment, first you construct the parse table by using the algorithm discussed in the class. This algorithm requires the computation of FIRST and FOLLOW functions. You have implemented this in the previous lab assignment. 
 
 The due date for the submission: 03  Nov 2020 10:00 PM. 
+
+# Week-7
+
+1. non-recursive Predictive Parser for
+   S -> aBa
+   B -> bB | epsilon
+
+2. non-recursive Predictive Parser for
+    E → TE’
+    E’→ +TE’ | epsilon  let A be E'
+    T → FT’             let B be T'
+    T’→ *FT’ | epsilon  
+    F → (E) | d
+
+# Week-8
+
+1. . Shift Reduce Parser for
+    E->E+E
+    E->E*E
+    E->(E)
+    E->d
+
+2. Shift Reduce Parser for
+    S –> 0S0 | 1S1 | 2
+
+# Week-9
+
+1. E -> E+T |T
+T-> T*F | F
+F -> (E) | d
+
+2. E -> E+E | E-E | E*E | E/E | -E | (E) | digit
+
+
